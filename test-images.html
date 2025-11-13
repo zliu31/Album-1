@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #1a1a2e;
+            color: white;
+        }
+        .test-image {
+            margin: 20px;
+            padding: 10px;
+            background: #333;
+            border-radius: 10px;
+        }
+        .test-image img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid #4ecdc4;
+            border-radius: 10px;
+        }
+        .test-image h3 {
+            margin: 10px 0;
+        }
+        .error {
+            color: #ff6b6b;
+        }
+        .success {
+            color: #4ecdc4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Loading Test</h1>
+    <p>This page tests if all images can be loaded correctly.</p>
+
+    <div class="test-image">
+        <h3>Travis Scott</h3>
+        <img src="images/travis.webp" alt="Travis Scott"
+             onload="this.nextElementSibling.innerHTML='<span class=success>✓ Loaded</span>'"
+             onerror="this.nextElementSibling.innerHTML='<span class=error>✗ Failed to load</span>'">
+        <p>Loading...</p>
+    </div>
+
+    <div class="test-image">
+        <h3>Drake</h3>
+        <img src="images/drake.webp" alt="Drake"
+             onload="this.nextElementSibling.innerHTML='<span class=success>✓ Loaded</span>'"
+             onerror="this.nextElementSibling.innerHTML='<span class=error>✗ Failed to load</span>'">
+        <p>Loading...</p>
+    </div>
+
+    <div class="test-image">
+        <h3>Kanye West</h3>
+        <img src="images/Kanye.png" alt="Kanye"
+             onload="this.nextElementSibling.innerHTML='<span class=success>✓ Loaded</span>'"
+             onerror="this.nextElementSibling.innerHTML='<span class=error>✗ Failed to load</span>'">
+        <p>Loading...</p>
+    </div>
+
+    <div class="test-image">
+        <h3>Kendrick Lamar</h3>
+        <img src="images/kendrick.jpeg" alt="Kendrick"
+             onload="this.nextElementSibling.innerHTML='<span class=success>✓ Loaded</span>'"
+             onerror="this.nextElementSibling.innerHTML='<span class=error>✗ Failed to load</span>'">
+        <p>Loading...</p>
+    </div>
+
+    <div class="test-image">
+        <h3>Astroworld</h3>
+        <img src="images/Travis_Scott_-_Astroworld.png" alt="Astroworld"
+             onload="this.nextElementSibling.innerHTML='<span class=success>✓ Loaded</span>'"
+             onerror="this.nextElementSibling.innerHTML='<span class=error>✗ Failed to load</span>'">
+        <p>Loading...</p>
+    </div>
+
+    <div class="test-image">
+        <h3>DAMN.</h3>
+        <img src="images/Damn.jpeg" alt="DAMN"
+             onload="this.nextElementSibling.innerHTML='<span class=success>✓ Loaded</span>'"
+             onerror="this.nextElementSibling.innerHTML='<span class=error>✗ Failed to load</span>'">
+        <p>Loading...</p>
+    </div>
+
+    <script>
+        console.log('Image test page loaded');
+        console.log('Current location:', window.location.href);
+    </script>
+</body>
+</html>
